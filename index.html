@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#0f172a">
+    
     <title>Leo Lingel Pañares | Executive VA & Strategic Operator</title>
     
     <meta name="description" content="Portfolio of Leo Lingel Pañares - Executive VA, Strategic Operator, and Digital Marketing Specialist with 8+ years of experience.">
     <meta name="keywords" content="Executive VA, Operations Manager, Digital Marketing, Business Development">
-    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://masterliyuu.github.io/">
     <meta property="og:title" content="Leo Lingel Pañares | Executive VA & Strategic Operator">
     <meta property="og:description" content="Scaling Businesses Through Strategic Operations & Creative Marketing. View my portfolio and specialized resumes.">
     <meta property="og:image" content="https://masterliyuu.github.io/LEO-PROFILE.png">
-
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://masterliyuu.github.io/">
     <meta property="twitter:title" content="Leo Lingel Pañares | Executive VA & Strategic Operator">
     <meta property="twitter:description" content="Scaling Businesses Through Strategic Operations & Creative Marketing.">
     <meta property="twitter:image" content="https://masterliyuu.github.io/LEO-PROFILE.png">
 
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script>
         tailwind.config = {
             theme: {
@@ -41,145 +43,26 @@
             }
         }
     </script>
-    
-    <style>
-        * { -webkit-tap-highlight-color: transparent; }
-        
-        /* Mobile-First Responsive Text */
-        @media (max-width: 640px) {
-            html { font-size: 14px; }
-        }
-        @media (min-width: 641px) and (max-width: 1024px) {
-            html { font-size: 15px; }
-        }
-        
-        /* Smooth scrolling */
-        html { scroll-behavior: smooth; }
-        
-        /* Swiper Custom Styling */
-        .swiper-pagination-bullet { background: #64748b; opacity: 0.5; transition: all 0.3s ease; }
-        .swiper-pagination-bullet-active { background: #38bdf8; opacity: 1; transform: scale(1.2); }
-        
-        .swiper-button-next, .swiper-button-prev { 
-            color: #38bdf8; 
-            background: rgba(15, 23, 42, 0.6); 
-            padding: 20px 15px;
-            border-radius: 10px; 
-            backdrop-filter: blur(4px);
-            width: auto !important;
-            height: auto !important;
-            transition: all 0.3s ease;
-        }
-        
-        .swiper-button-next::after, .swiper-button-prev::after { 
-            font-size: 1.2rem !important; 
-            font-weight: bold; 
-        }
-        
-        .swiper-button-next:hover, .swiper-button-prev:hover { 
-            background: rgba(15, 23, 42, 0.9); 
-        }
-
-        @media (max-width: 768px) {
-            .swiper-button-next, .swiper-button-prev { 
-                padding: 12px 8px;
-            }
-            .swiper-button-next::after, .swiper-button-prev::after { 
-                font-size: 1rem !important; 
-            }
-        }
-
-        /* Responsive Image Optimization */
-        img { 
-            max-width: 100%; 
-            height: auto; 
-            display: block;
-        }
-
-        /* Touch-friendly buttons */
-        @media (hover: none) and (pointer: coarse) {
-            button, a { min-height: 44px; }
-        }
-
-        /* Safe area padding for notched devices */
-        body { padding-top: env(safe-area-inset-top); }
-
-        /* CTA Banner Glow Effect */
-        .cta-banner {
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(56, 189, 248, 0.05) 100%);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.15), inset 0 0 20px rgba(56, 189, 248, 0.05);
-        }
-
-        .cta-banner:hover {
-            border-color: rgba(56, 189, 248, 0.5);
-            box-shadow: 0 0 40px rgba(56, 189, 248, 0.25), inset 0 0 20px rgba(56, 189, 248, 0.1);
-        }
-
-        /* ROI Number Animation */
-        .roi-number {
-            font-variant-numeric: tabular-nums;
-        }
-
-        /* Process Step Animation */
-        .process-step {
-            transition: all 0.3s ease;
-        }
-
-        .process-step:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Case Study Card Hover */
-        .case-study-card {
-            transition: all 0.3s ease;
-        }
-
-        .case-study-card:hover {
-            border-color: rgba(56, 189, 248, 0.5);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
-        }
-
-        /* Social Proof Animations */
-        .testimonial-count {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-    </style>
 </head>
-
 <body class="bg-darkBg text-gray-200 font-sans antialiased">
 
-    <!-- MOBILE MENU TOGGLE -->
     <button id="mobileMenuToggle" class="fixed top-6 right-6 z-[51] md:hidden p-2 rounded-lg bg-accent/10 border border-accent/30 text-accent transition" aria-label="Toggle menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="menuIcon"></path>
         </svg>
     </button>
 
-    <!-- NAVIGATION -->
     <nav class="fixed w-full top-0 z-50 bg-darkBg/95 backdrop-blur-lg border-b border-gray-800/50 transition-all duration-300">
         <div class="px-4 sm:px-6 py-4 flex justify-between items-center max-w-7xl mx-auto">
             <div class="text-lg sm:text-xl font-bold text-white tracking-wider">Leoo<span class="text-accent">.</span></div>
-            
-            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-6 lg:space-x-8">
                 <a href="#services" class="text-sm lg:text-base hover:text-accent transition duration-300">Services</a>
                 <a href="#work" class="text-sm lg:text-base hover:text-accent transition duration-300">My Work</a>
                 <a href="#process" class="text-sm lg:text-base hover:text-accent transition duration-300">Process</a>
                 <a href="#about" class="text-sm lg:text-base hover:text-accent transition duration-300">About</a>
             </div>
-            
-            <a href="#contact" class="bg-accent text-darkBg px-4 sm:px-5 py-2 rounded-full text-sm font-semibold hover:bg-sky-400 transition shadow-lg">
-                Get In Touch
-            </a>
+            <a href="#contact" class="bg-accent text-darkBg px-4 sm:px-5 py-2 rounded-full text-sm font-semibold hover:bg-sky-400 transition shadow-lg">Get In Touch</a>
         </div>
-
-        <!-- Mobile Menu (Hidden by default) -->
         <div id="mobileMenu" class="hidden md:hidden border-t border-gray-800/50 bg-darkBg/98 backdrop-blur-lg">
             <div class="px-4 py-4 space-y-3">
                 <a href="#services" class="block py-2 text-sm hover:text-accent transition">Services</a>
@@ -190,7 +73,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-24 pb-8 sm:pb-12">
         <h1 data-aos="fade-up" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 sm:mb-6 leading-tight max-w-5xl">
             Scaling Businesses Through <span class="text-accent">Strategic Operations</span> & Creative Marketing.
@@ -198,127 +80,86 @@
         <p data-aos="fade-up" data-aos-delay="150" class="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mb-6 sm:mb-10 px-2">
             8+ years of experience streamlining workflows, driving organizational growth, and executing high-level business development.
         </p>
-        <a data-aos="zoom-in" data-aos-delay="300" href="#contact" class="px-6 sm:px-8 py-3 sm:py-4 bg-accent text-darkBg text-base sm:text-lg font-bold rounded-full hover:bg-sky-400 transition shadow-[0_0_15px_rgba(56,189,248,0.3)] active:scale-95">
-            Let's Build Together
-        </a>
+        <a data-aos="zoom-in" data-aos-delay="300" href="#contact" class="px-6 sm:px-8 py-3 sm:py-4 bg-accent text-darkBg text-base sm:text-lg font-bold rounded-full hover:bg-sky-400 transition shadow-[0_0_15px_rgba(56,189,248,0.3)] active:scale-95">Let's Build Together</a>
     </header>
 
-    <!-- ⭐ CTA BANNER - STRATEGIC CONSULTATION OFFER -->
     <section class="py-8 sm:py-12 px-4 sm:px-6 bg-darkBg border-t border-gray-800/50">
         <div data-aos="zoom-in" class="max-w-4xl mx-auto cta-banner rounded-2xl p-8 sm:p-12">
             <div class="grid md:grid-cols-3 gap-6 items-center">
-                <!-- Left: Value Proposition -->
                 <div class="md:col-span-2 text-center md:text-left">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">
-                        🎯 Free Strategic Consultation
-                    </h3>
-                    <p class="text-sm sm:text-base text-gray-300 mb-4">
-                        Schedule a 30-minute no-obligation strategy call to discuss how I can optimize your operations and scale your business.
-                    </p>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">🎯 Free Strategic Consultation</h3>
+                    <p class="text-sm sm:text-base text-gray-300 mb-4">Schedule a 30-minute no-obligation strategy call to discuss how I can optimize your operations and scale your business.</p>
                     <div class="flex flex-wrap gap-2 justify-center md:justify-start text-xs text-accent">
-                        <span>✓ Zero Pressure</span>
-                        <span>✓ Actionable Insights</span>
-                        <span>✓ Custom Solutions</span>
+                        <span>✓ Zero Pressure</span> <span>✓ Actionable Insights</span> <span>✓ Custom Solutions</span>
                     </div>
                 </div>
-
-                <!-- Right: CTA Button -->
                 <div class="flex justify-center md:justify-end">
-                    <a href="https://calendly.com/panaresleolingel/30min" target="_blank" rel="noopener noreferrer" class="px-6 sm:px-8 py-3 sm:py-4 bg-accent text-darkBg font-bold text-base sm:text-lg rounded-xl hover:bg-sky-300 transition shadow-lg hover:shadow-accent/40 active:scale-95 whitespace-nowrap">
-                        📅 Book Free Call
-                    </a>
+                    <a href="https://calendly.com/panaresleolingel/30min" target="_blank" rel="noopener noreferrer" class="px-6 sm:px-8 py-3 sm:py-4 bg-accent text-darkBg font-bold text-base sm:text-lg rounded-xl hover:bg-sky-300 transition shadow-lg hover:shadow-accent/40 active:scale-95 whitespace-nowrap">📅 Book Free Call</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CLIENTS SECTION -->
     <section class="py-8 sm:py-12 border-t border-gray-800/50 bg-darkBg">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <p data-aos="fade-up" class="text-center text-xs font-bold tracking-widest text-gray-500 uppercase mb-6 sm:mb-8">Trusted by & Featured at</p>
             <div data-aos="fade-up" data-aos-delay="100" class="flex flex-wrap justify-center items-center gap-6 sm:gap-10 md:gap-20 opacity-60">
-                <div class="text-lg sm:text-xl md:text-2xl font-black tracking-tighter text-gray-300 hover:text-white transition duration-300">LAMAC <span class="font-light">MPC</span></div>
-                <div class="text-lg sm:text-xl md:text-2xl font-bold tracking-widest text-gray-300 hover:text-accent transition duration-300">NATCCO</div>
-                <div class="text-lg sm:text-xl md:text-2xl font-serif italic font-bold text-gray-300 hover:text-green-400 transition duration-300">AgriTerra</div>
-                <div class="text-lg sm:text-xl md:text-2xl font-extrabold uppercase tracking-widest text-gray-300 hover:text-blue-500 transition duration-300">ICA <span class="text-xs sm:text-sm font-normal tracking-normal text-gray-400">Malaysia</span></div>
-                <div class="text-lg sm:text-xl md:text-2xl font-black tracking-tight text-gray-300 hover:text-orange-400 transition duration-300">YOUth<span class="font-light">CAN</span></div>
+                <div class="text-lg sm:text-xl md:text-2xl font-black tracking-tighter text-gray-300">LAMAC <span class="font-light">MPC</span></div>
+                <div class="text-lg sm:text-xl md:text-2xl font-bold tracking-widest text-gray-300">NATCCO</div>
+                <div class="text-lg sm:text-xl md:text-2xl font-serif italic font-bold text-gray-300">AgriTerra</div>
+                <div class="text-lg sm:text-xl md:text-2xl font-extrabold uppercase tracking-widest text-gray-300">ICA <span class="text-xs sm:text-sm font-normal tracking-normal text-gray-400">Malaysia</span></div>
+                <div class="text-lg sm:text-xl md:text-2xl font-black tracking-tight text-gray-300">YOUth<span class="font-light">CAN</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ROI METRICS SECTION -->
     <section id="metrics" class="py-12 sm:py-20 bg-gradient-to-b from-gray-800/30 to-gray-800/10 border-t border-gray-800/50 relative z-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div data-aos="fade-up" class="text-center mb-12 sm:mb-16">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">Business Impact & Results</h2>
                 <p class="text-sm sm:text-base text-gray-400">Proven ROI delivered to clients and organizations</p>
             </div>
-
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
-                <!-- ROI Metric 1 -->
                 <div data-aos="fade-up" data-aos-delay="0" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl hover:border-accent/50 transition duration-300 text-center">
                     <div class="text-3xl sm:text-4xl font-black text-accent mb-2 roi-number">$2.5M+</div>
                     <p class="text-xs sm:text-sm text-gray-300 font-semibold uppercase tracking-wide">Client Revenue Impacted</p>
-                    <p class="text-xs text-gray-500 mt-2">Cumulative value across partnerships</p>
                 </div>
-
-                <!-- ROI Metric 2 -->
                 <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl hover:border-accent/50 transition duration-300 text-center">
                     <div class="text-3xl sm:text-4xl font-black text-accent mb-2 roi-number">300%</div>
                     <p class="text-xs sm:text-sm text-gray-300 font-semibold uppercase tracking-wide">Avg. Growth for Teams</p>
-                    <p class="text-xs text-gray-500 mt-2">Engagement & efficiency increase</p>
                 </div>
-
-                <!-- ROI Metric 3 -->
                 <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl hover:border-accent/50 transition duration-300 text-center">
                     <div class="text-3xl sm:text-4xl font-black text-accent mb-2 roi-number">50+</div>
                     <p class="text-xs sm:text-sm text-gray-300 font-semibold uppercase tracking-wide">Projects Delivered</p>
-                    <p class="text-xs text-gray-500 mt-2">On-time & on-budget execution</p>
                 </div>
-
-                <!-- ROI Metric 4 -->
                 <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl hover:border-accent/50 transition duration-300 text-center">
                     <div class="text-3xl sm:text-4xl font-black text-accent mb-2 roi-number">40%</div>
                     <p class="text-xs sm:text-sm text-gray-300 font-semibold uppercase tracking-wide">Cost Reduction</p>
-                    <p class="text-xs text-gray-500 mt-2">Operational efficiency gains</p>
                 </div>
-
-                <!-- ROI Metric 5 -->
                 <div data-aos="fade-up" data-aos-delay="400" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl hover:border-accent/50 transition duration-300 text-center">
                     <div class="text-3xl sm:text-4xl font-black text-accent mb-2 roi-number">8+</div>
                     <p class="text-xs sm:text-sm text-gray-300 font-semibold uppercase tracking-wide">Years Experience</p>
-                    <p class="text-xs text-gray-500 mt-2">Proven track record</p>
                 </div>
-            </div>
-
-            <!-- Quick Stat Box -->
-            <div data-aos="zoom-in" data-aos-delay="500" class="mt-10 sm:mt-16 max-w-2xl mx-auto bg-accent/10 border border-accent/30 rounded-xl p-6 sm:p-8 text-center">
-                <p class="text-sm text-gray-300 mb-2">✓ Trusted by executives and founders across multiple industries</p>
-                <p class="text-xs text-gray-500">All metrics based on documented results from completed engagements</p>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
     <section id="services" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
         <div data-aos="fade-up" class="text-center mb-10 sm:mb-16">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">Core Competencies</h2>
-            <p class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto px-2">Specialized expertise designed to streamline your operations and scale your brand.</p>
+            <p class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">Specialized expertise designed to streamline your operations and scale your brand.</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
                 <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">⚙️</div>
                 <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Executive Operations</h3>
                 <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">Streamlining daily workflows for busy founders. Managing complex calendars, creating standard operating procedures (SOPs), and driving organizational efficiency through automation, delegation, and strategic planning.</p>
             </div>
-            
             <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
                 <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">🚀</div>
                 <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Digital Marketing & Content</h3>
                 <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">Scaling brand presence through strategic social media management, persuasive copywriting, and high-quality multimedia production using industry-leading tools and data-driven strategies.</p>
             </div>
-
             <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
                 <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">📈</div>
                 <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Business Development</h3>
@@ -327,647 +168,169 @@
         </div>
     </section>
 
-    <!-- ⭐ #3: CASE STUDY RESULTS SECTION -->
     <section id="case-studies" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
         <div data-aos="fade-up" class="text-center mb-10 sm:mb-16">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">Measurable Results</h2>
             <p class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">Real outcomes from completed client engagements</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            <!-- Case Study 1 -->
             <div data-aos="fade-up" data-aos-delay="0" class="case-study-card bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl">
                 <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">LAMAC MPC</h3>
-                        <p class="text-xs sm:text-sm text-accent font-semibold">Operations Overhaul</p>
-                    </div>
-                    <div class="text-3xl">⚙️</div>
+                    <div><h3 class="text-xl sm:text-2xl font-bold text-white mb-1">LAMAC MPC</h3><p class="text-xs sm:text-sm text-accent font-semibold">Operations Overhaul</p></div><div class="text-3xl">⚙️</div>
                 </div>
                 <div class="space-y-4">
                     <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-accent">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Result 1</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">40% Efficiency Gain</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Streamlined 5+ operational workflows</p>
-                    </div>
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-green-400">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Result 2</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">$150K Annual Savings</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Through process optimization & automation</p>
-                    </div>
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-blue-400">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Timeline</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">3 Months</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Full implementation & training</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Result 1</p><p class="text-lg sm:text-xl font-bold text-white">40% Efficiency Gain</p><p class="text-xs sm:text-sm text-gray-400 mt-2">Streamlined 5+ operational workflows</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Case Study 2 -->
             <div data-aos="fade-up" data-aos-delay="100" class="case-study-card bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl">
                 <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">NATCCO Youth</h3>
-                        <p class="text-xs sm:text-sm text-accent font-semibold">Marketing Campaign</p>
-                    </div>
-                    <div class="text-3xl">🚀</div>
+                    <div><h3 class="text-xl sm:text-2xl font-bold text-white mb-1">NATCCO Youth</h3><p class="text-xs sm:text-sm text-accent font-semibold">Marketing Campaign</p></div><div class="text-3xl">🚀</div>
                 </div>
                 <div class="space-y-4">
                     <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-accent">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Result 1</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">250% Engagement Boost</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Across all social media platforms</p>
-                    </div>
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-green-400">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Result 2</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">5,000+ Reach</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Organic audience growth achieved</p>
-                    </div>
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-blue-400">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Leads Generated</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">25+ Qualified</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">High-intent prospects for partnership</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case Study 3 -->
-            <div data-aos="fade-up" data-aos-delay="200" class="case-study-card bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl">
-                <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">AgriTerra</h3>
-                        <p class="text-xs sm:text-sm text-accent font-semibold">Multimedia Direction</p>
-                    </div>
-                    <div class="text-3xl">🎬</div>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-accent">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Deliverables</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">15+ Assets</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Documentary + promotional content</p>
-                    </div>
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-green-400">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Recognition</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">Featured Campaign</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Recognized across industry networks</p>
-                    </div>
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-blue-400">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Team Impact</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">5+ Members Led</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Successful project delivery</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case Study 4 -->
-            <div data-aos="fade-up" data-aos-delay="300" class="case-study-card bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl">
-                <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">ICA Malaysia</h3>
-                        <p class="text-xs sm:text-sm text-accent font-semibold">Business Strategy</p>
-                    </div>
-                    <div class="text-3xl">📈</div>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-accent">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Achievement</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">3rd Place Winner</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">ICA Business Competition</p>
-                    </div>
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-green-400">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Impact</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">Regional Visibility</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Expanded market opportunities</p>
-                    </div>
-                    <div class="bg-gray-900/40 rounded-lg p-4 border-l-4 border-blue-400">
-                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Partnerships</p>
-                        <p class="text-lg sm:text-xl font-bold text-white">5+ Alliances</p>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Strategic collaborations forged</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-1">Result 1</p><p class="text-lg sm:text-xl font-bold text-white">250% Engagement Boost</p><p class="text-xs sm:text-sm text-gray-400 mt-2">Across all platforms</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ⭐ #4: PROCESS/METHODOLOGY SECTION -->
     <section id="process" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800 bg-gray-800/10">
         <div data-aos="fade-up" class="text-center mb-10 sm:mb-16">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">The Leo Blueprint</h2>
             <p class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">How I approach every engagement for maximum impact</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
-            <!-- Step 1 -->
             <div data-aos="fade-up" data-aos-delay="0" class="process-step">
                 <div class="text-center">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                        <span class="text-2xl sm:text-3xl font-bold text-accent">1</span>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Discovery</h3>
-                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                        Deep audit of current systems, identifying bottlenecks, pain points, and untapped opportunities. Stakeholder interviews to understand organizational goals.
-                    </p>
-                    <p class="text-xs text-accent font-semibold mt-4">📋 Week 1</p>
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center mx-auto mb-4 sm:mb-6"><span class="text-2xl sm:text-3xl font-bold text-accent">1</span></div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Discovery</h3><p class="text-xs sm:text-sm text-gray-400">Deep audit of current systems, identifying bottlenecks, and tapping opportunities.</p>
                 </div>
             </div>
-
-            <!-- Arrow -->
-            <div class="hidden md:flex items-center justify-center">
-                <div class="text-2xl text-accent/50">→</div>
-            </div>
-
-            <!-- Step 2 -->
+            <div class="hidden md:flex items-center justify-center"><div class="text-2xl text-accent/50">→</div></div>
             <div data-aos="fade-up" data-aos-delay="100" class="process-step md:col-span-1">
                 <div class="text-center">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                        <span class="text-2xl sm:text-3xl font-bold text-accent">2</span>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Strategy</h3>
-                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                        Design custom solutions tailored to your goals. Create roadmaps, SOPs, and implementation plans. Align team and leadership on next steps.
-                    </p>
-                    <p class="text-xs text-accent font-semibold mt-4">🎯 Weeks 2-3</p>
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center mx-auto mb-4 sm:mb-6"><span class="text-2xl sm:text-3xl font-bold text-accent">2</span></div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Strategy</h3><p class="text-xs sm:text-sm text-gray-400">Design custom solutions tailored to your goals. Create roadmaps and SOPs.</p>
                 </div>
             </div>
-
-            <!-- Arrow -->
-            <div class="hidden md:flex items-center justify-center">
-                <div class="text-2xl text-accent/50">→</div>
-            </div>
-
-            <!-- Step 3 -->
+            <div class="hidden md:flex items-center justify-center"><div class="text-2xl text-accent/50">→</div></div>
             <div data-aos="fade-up" data-aos-delay="200" class="process-step md:col-span-1">
                 <div class="text-center">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                        <span class="text-2xl sm:text-3xl font-bold text-accent">3</span>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Execution</h3>
-                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                        Roll out solutions, train teams, monitor progress. Make real-time adjustments. Ensure smooth implementation and adoption across the organization.
-                    </p>
-                    <p class="text-xs text-accent font-semibold mt-4">⚡ Week 4+</p>
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center mx-auto mb-4 sm:mb-6"><span class="text-2xl sm:text-3xl font-bold text-accent">3</span></div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Execution</h3><p class="text-xs sm:text-sm text-gray-400">Roll out solutions, train teams, and monitor progress.</p>
                 </div>
-            </div>
-
-            <!-- Arrow (Mobile View) -->
-            <div class="md:hidden col-span-1 flex justify-center">
-                <div class="text-2xl text-accent/50">↓</div>
-            </div>
-
-            <!-- Step 4 - Full Width on Mobile -->
-            <div data-aos="fade-up" data-aos-delay="300" class="process-step md:col-span-2">
-                <div class="text-center">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-500/20 border-2 border-green-400 flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                        <span class="text-2xl sm:text-3xl font-bold text-green-400">∞</span>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Scale & Optimize</h3>
-                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                        Ongoing support, continuous improvement cycles, and strategic optimization. Measure results, gather feedback, and scale what works.
-                    </p>
-                    <p class="text-xs text-green-400 font-semibold mt-4">🚀 Ongoing</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Process Benefits -->
-        <div data-aos="zoom-in" data-aos-delay="400" class="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div class="bg-gray-800/40 border border-gray-700 p-4 sm:p-6 rounded-lg text-center">
-                <p class="text-2xl sm:text-3xl mb-2">🎯</p>
-                <p class="text-sm sm:text-base font-semibold text-white">Structured Approach</p>
-                <p class="text-xs text-gray-400 mt-2">Clear phases with measurable milestones</p>
-            </div>
-            <div class="bg-gray-800/40 border border-gray-700 p-4 sm:p-6 rounded-lg text-center">
-                <p class="text-2xl sm:text-3xl mb-2">💡</p>
-                <p class="text-sm sm:text-base font-semibold text-white">Custom Solutions</p>
-                <p class="text-xs text-gray-400 mt-2">Every strategy tailored to your needs</p>
-            </div>
-            <div class="bg-gray-800/40 border border-gray-700 p-4 sm:p-6 rounded-lg text-center">
-                <p class="text-2xl sm:text-3xl mb-2">📊</p>
-                <p class="text-sm sm:text-base font-semibold text-white">Results-Focused</p>
-                <p class="text-xs text-gray-400 mt-2">Measured outcomes at every stage</p>
             </div>
         </div>
     </section>
 
-    <!-- ⭐ #5: ENHANCED SOCIAL PROOF SECTION -->
     <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
         <div data-aos="fade-up" class="text-center mb-10 sm:mb-12">
             <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Why Professionals Trust Leo</h2>
-            <div data-aos="zoom-in" data-aos-delay="100" class="flex items-center justify-center gap-2 sm:gap-3 mt-6">
-                <div class="flex">
-                    <span class="text-yellow-400">★★★★★</span>
-                </div>
-                <p class="text-sm sm:text-base text-gray-300">
-                    <span class="font-bold text-white">5.0 Rating</span> from 45+ verified professionals
-                </p>
-                <p class="text-xs text-gray-500">✓ Verified</p>
-            </div>
         </div>
-
-        <!-- Social Proof Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
-            <!-- Trust Box 1 -->
-            <div data-aos="fade-up" data-aos-delay="0" class="bg-gradient-to-br from-green-500/10 to-green-500/5 border border-green-500/30 p-6 sm:p-8 rounded-xl">
-                <div class="text-3xl sm:text-4xl mb-4">🏆</div>
-                <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Award-Winning</h3>
-                <p class="text-xs sm:text-sm text-gray-400">Recognized for excellence in 3+ international competitions</p>
-                <p class="text-xs text-green-400 font-semibold mt-4">3x Competition Winner</p>
-            </div>
-
-            <!-- Trust Box 2 -->
-            <div data-aos="fade-up" data-aos-delay="100" class="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border border-blue-500/30 p-6 sm:p-8 rounded-xl">
-                <div class="text-3xl sm:text-4xl mb-4">👥</div>
-                <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Multi-Industry</h3>
-                <p class="text-xs sm:text-sm text-gray-400">Successfully worked with 15+ industries and organization types</p>
-                <p class="text-xs text-blue-400 font-semibold mt-4">Diverse Portfolio</p>
-            </div>
-
-            <!-- Trust Box 3 -->
-            <div data-aos="fade-up" data-aos-delay="200" class="bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/30 p-6 sm:p-8 rounded-xl">
-                <div class="text-3xl sm:text-4xl mb-4">⚡</div>
-                <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Quick Results</h3>
-                <p class="text-xs sm:text-sm text-gray-400">Average project ROI visible within 30-60 days</p>
-                <p class="text-xs text-purple-400 font-semibold mt-4">90% On-Time Delivery</p>
-            </div>
-        </div>
-
-        <!-- Testimonials with LinkedIn Integration -->
         <div data-aos="zoom-in" class="swiper testimonialSwiper pb-12 sm:pb-16">
             <div class="swiper-wrapper">
-                
                 <div class="swiper-slide">
                     <div class="bg-gray-800/40 border border-gray-700 p-6 sm:p-10 md:p-14 rounded-lg sm:rounded-3xl relative shadow-2xl mx-1 sm:mx-2">
-                        <div class="absolute -top-4 sm:-top-6 left-4 sm:left-10 text-4xl sm:text-6xl text-accent opacity-50 font-serif">"</div>
-                        <p class="text-base sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-6 sm:mb-8 relative z-10 text-center">
-                            Leo is a rare talent who seamlessly blends high-level operational strategy with creative marketing. His ability to optimize systems while leading teams to execute award-winning deliverables is exceptional.
-                        </p>
+                        <p class="text-base sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-6 sm:mb-8 text-center">Leo is a rare talent who seamlessly blends high-level operational strategy with creative marketing.</p>
                         <div class="flex items-center justify-center gap-3 sm:gap-4">
                             <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" alt="Recommender 1" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" loading="lazy" alt="Executive Recommender 1" class="w-full h-full object-cover">
                             </div>
-                            <div class="text-left">
-                                <h4 class="text-white font-bold text-sm sm:text-base">Executive Director</h4>
-                                <p class="text-accent text-xs sm:text-sm">⭐⭐⭐⭐⭐ Verified</p>
-                            </div>
+                            <div class="text-left"><h4 class="text-white font-bold text-sm sm:text-base">Executive Director</h4></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="swiper-slide">
-                    <div class="bg-gray-800/40 border border-gray-700 p-6 sm:p-10 md:p-14 rounded-lg sm:rounded-3xl relative shadow-2xl mx-1 sm:mx-2">
-                        <div class="absolute -top-4 sm:-top-6 left-4 sm:left-10 text-4xl sm:text-6xl text-accent opacity-50 font-serif">"</div>
-                        <p class="text-base sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-6 sm:mb-8 relative z-10 text-center">
-                            Working with Leo completely transformed our workflow. His strategic foresight and dedication to getting projects closed on time and under budget saved us countless hours and resources.
-                        </p>
-                        <div class="flex items-center justify-center gap-3 sm:gap-4">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Recommender 2" class="w-full h-full object-cover">
-                            </div>
-                            <div class="text-left">
-                                <h4 class="text-white font-bold text-sm sm:text-base">Operations Manager</h4>
-                                <p class="text-accent text-xs sm:text-sm">⭐⭐⭐⭐⭐ Verified</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="bg-gray-800/40 border border-gray-700 p-6 sm:p-10 md:p-14 rounded-lg sm:rounded-3xl relative shadow-2xl mx-1 sm:mx-2">
-                        <div class="absolute -top-4 sm:-top-6 left-4 sm:left-10 text-4xl sm:text-6xl text-accent opacity-50 font-serif">"</div>
-                        <p class="text-base sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-6 sm:mb-8 relative z-10 text-center">
-                            A true professional. From managing stakeholder relations to steering our multimedia marketing efforts, his 100% commitment to our business goals was evident from day one.
-                        </p>
-                        <div class="flex items-center justify-center gap-3 sm:gap-4">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
-                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200" alt="Recommender 3" class="w-full h-full object-cover">
-                            </div>
-                            <div class="text-left">
-                                <h4 class="text-white font-bold text-sm sm:text-base">Founder & CEO</h4>
-                                <p class="text-accent text-xs sm:text-sm">⭐⭐⭐⭐⭐ Verified</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <div class="swiper-pagination mt-4 sm:mt-6"></div>
         </div>
-
-        <!-- Quick Stats -->
-        <div data-aos="zoom-in" data-aos-delay="300" class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 sm:mt-16">
-            <div class="text-center">
-                <p class="text-3xl sm:text-4xl font-black text-accent">45+</p>
-                <p class="text-xs sm:text-sm text-gray-400 mt-2 uppercase tracking-wide">Professional Endorsements</p>
-            </div>
-            <div class="text-center">
-                <p class="text-3xl sm:text-4xl font-black text-accent">98%</p>
-                <p class="text-xs sm:text-sm text-gray-400 mt-2 uppercase tracking-wide">Client Satisfaction Rate</p>
-            </div>
-            <div class="text-center">
-                <p class="text-3xl sm:text-4xl font-black text-accent">100%</p>
-                <p class="text-xs sm:text-sm text-gray-400 mt-2 uppercase tracking-wide">Would Recommend</p>
-            </div>
-        </div>
     </section>
 
-    <!-- WORK/PORTFOLIO SECTION -->
     <section id="work" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
         <div data-aos="fade-up" class="text-center mb-8 sm:mb-12">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 sm:mb-4">The Proof Vault</h2>
-            <p class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto px-2">Highlighting award-winning pitches, multimedia direction, and strategic leadership.</p>
         </div>
-
         <div data-aos="fade-up" data-aos-delay="100" class="swiper proofSwiper pb-12 sm:pb-16">
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
                 <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 h-full">
                         <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
-                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200" alt="Multimedia Direction" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
-                                <span class="bg-accent text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Multimedia & Leadership</span>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200" loading="lazy" alt="Multimedia Direction" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
                         </div>
-                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Documentary Director & Editor-in-Chief</h3>
-                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Directed "Sugilanon sa Kooperatiba" and led the editorial and design direction for "Soar Lamac MPC: 50 Years of Impact" documentary. Managed multimedia production pipeline, stakeholder coordination, and creative direction for organizational storytelling.</p>
+                        <div class="p-4 sm:p-8 md:p-10 text-center">
+                            <h3 class="text-lg sm:text-2xl font-bold text-white mb-2">Documentary Director & Editor-in-Chief</h3>
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
                 <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 h-full">
                         <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
-                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=1200" alt="Pitch Competitions" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
-                                <span class="bg-white text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Business Strategy</span>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=1200" loading="lazy" alt="Pitch Competitions" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
                         </div>
-                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Award-Winning Pitch Competitions</h3>
-                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Secured 1st Runner-Up at the NATCCO Youth Entrepreneurship Pitch, 2nd Runner-Up at YOUthCAN, and 3rd Place in the ICA Malaysia Business Competition. Developed compelling business narratives and presentations that resonated with expert judges and investors.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
-                        <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
-                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" alt="Digital Marketing Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
-                                <span class="bg-accent text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Digital Marketing</span>
-                            </div>
-                        </div>
-                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Social Media Growth Campaign</h3>
-                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Developed and executed comprehensive social media strategy that increased engagement by 300% and grew audience base across multiple platforms. Implemented data-driven content calendar and real-time community management.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
-                        <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
-                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" alt="Operations Management" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
-                                <span class="bg-white text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Operations</span>
-                            </div>
-                        </div>
-                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Operational Process Optimization</h3>
-                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Streamlined organizational workflows and implemented standardized operating procedures across 5+ departments. Reduced operational redundancies by 40% and improved team productivity through digital transformation initiatives.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 5 -->
-                <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
-                        <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
-                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200" alt="Stakeholder Engagement" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
-                                <span class="bg-accent text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Leadership</span>
-                            </div>
-                        </div>
-                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Strategic Partnership Development</h3>
-                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Built and maintained relationships with key stakeholders resulting in successful partnerships with major industry organizations. Facilitated collaborative initiatives that expanded market reach and organizational influence.</p>
+                        <div class="p-4 sm:p-8 md:p-10 text-center">
+                            <h3 class="text-lg sm:text-2xl font-bold text-white mb-2">Award-Winning Pitch Competitions</h3>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="swiper-pagination mt-4"></div>
             <div class="swiper-button-prev hidden sm:flex"></div>
             <div class="swiper-button-next hidden sm:flex"></div>
         </div>
     </section>
 
-    <!-- TOOLS SECTION -->
-    <section id="tools" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
-        <div data-aos="fade-up" class="text-center mb-8 sm:mb-12">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 sm:mb-4">Software Mastery</h2>
-            <p class="text-sm sm:text-base text-gray-400">The tools I use to execute operational excellence and creative marketing.</p>
-        </div>
-        
-        <div data-aos="zoom-in" data-aos-delay="150" class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
-            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Google Workspace</span>
-            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Trello & Asana</span>
-            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Adobe Suite</span>
-            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">CapCut</span>
-            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Meta Tools</span>
-            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Canva</span>
-            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">MS Office</span>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
-        <div class="flex flex-col lg:flex-row items-center gap-6 sm:gap-12">
-            <div data-aos="fade-right" class="w-full lg:w-1/2">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">From IT Educator to Strategic Operator.</h2>
-                <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4 leading-relaxed">
-                    I hold a B.S. in Information Technology and began my career teaching computer studies and multimedia. Since then, I have spent over 8 years managing high-level operations, leading cross-functional teams, and driving strategic initiatives for diverse organizations across multiple industries.
-                </p>
-                <p class="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8 leading-relaxed">
-                    As a former National President for AGRITERRA Youth National and a seasoned Business Development Manager, I don't just complete tasks—I optimize systems, lead teams, and scale businesses. My background uniquely positions me to understand both the technical and human elements of operational excellence.
-                </p>
-                
-                <div class="mt-6 sm:mt-8">
-                    <h4 class="text-white font-semibold mb-3 sm:mb-4 text-xs sm:text-sm tracking-wider uppercase text-accent">Download My Specialized Resumes</h4>
-                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                        <a href="Leo-Updated-Resume-EVA-2026.pdf" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-xs sm:text-sm font-medium hover:border-accent hover:text-accent transition text-center">
-                            📄 Executive VA
-                        </a>
-                        <a href="Leo-Updated-Resume-MS-2026.pdf" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-xs sm:text-sm font-medium hover:border-accent hover:text-accent transition text-center">
-                            📄 Marketing
-                        </a>
-                        <a href="Leo-Updated-Resume-BDO2026.pdf" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-xs sm:text-sm font-medium hover:border-accent hover:text-accent transition text-center">
-                            📄 Business Dev
-                        </a>
-                    </div>
-                </div>
+    <section id="about" class="py-12 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-gray-800">
+        <div data-aos="fade-up" class="w-full mb-12">
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-gray-800">
+                <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/YOUR-VIDEO-ID-HERE" title="Leo Lingel Pañares Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            
-            <div data-aos="fade-left" class="w-full lg:w-1/2 flex justify-center">
-                <div class="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-gray-800 shadow-[0_0_30px_rgba(56,189,248,0.2)] bg-gray-700 flex items-center justify-center text-gray-500 overflow-hidden">
-                    <img src="LEO-PROFILE.png" alt="Leo Lingel Pañares" class="w-full h-full object-cover">
+        </div>
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div data-aos="fade-right" class="lg:col-span-4 flex justify-center">
+                <img src="LEO-PROFILE.png" loading="lazy" alt="Leo Lingel Pañares" class="w-64 h-64 rounded-2xl border-4 border-gray-800 shadow-[0_0_30px_rgba(56,189,248,0.3)] object-cover">
+            </div>
+            <div data-aos="fade-left" class="lg:col-span-8">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">From IT Educator to Strategic Operator.</h2>
+                <p class="text-gray-400 mb-6 leading-relaxed">I hold a B.S. in Information Technology and began my career teaching computer studies. Since then, I have spent over 8 years managing high-level operations and scaling businesses.</p>
+                <div class="flex flex-wrap gap-4 mt-6">
+                    <a href="Leo-Updated-Resume-EVA-2026.pdf" target="_blank" class="px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-sm hover:border-accent hover:text-accent transition">📄 Executive VA</a>
+                    <a href="Leo-Updated-Resume-MS-2026.pdf" target="_blank" class="px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-sm hover:border-accent hover:text-accent transition">📄 Marketing</a>
+                    <a href="Leo-Updated-Resume-BDO2026.pdf" target="_blank" class="px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-sm hover:border-accent hover:text-accent transition">📄 Business Dev</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section id="contact" class="py-12 sm:py-20 px-4 sm:px-6 max-w-4xl mx-auto border-t border-gray-800">
         <div data-aos="fade-up" class="text-center mb-8 sm:mb-12">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 sm:mb-4">Let's Work Together</h2>
-            <p class="text-sm sm:text-base text-gray-400">Send me a message below, and I'll get back to you within 24 hours.</p>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's Work Together</h2>
         </div>
-
-        <form data-aos="fade-up" data-aos-delay="150" action="https://api.web3forms.com/submit" method="POST" class="space-y-4 sm:space-y-6 bg-gray-800/30 p-6 sm:p-8 rounded-xl sm:rounded-2xl border border-gray-700 shadow-xl">
+        <form data-aos="fade-up" data-aos-delay="150" action="https://api.web3forms.com/submit" method="POST" class="space-y-4 sm:space-y-6 bg-gray-800/30 p-6 sm:p-8 rounded-xl shadow-xl">
             <input type="hidden" name="access_key" value="b59b3ab8-55eb-4e9b-9f2e-fc29b7b38804">
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                    <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Name</label>
-                    <input type="text" name="name" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Email</label>
-                    <input type="email" name="email" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
-                </div>
-            </div>
+            <input type="hidden" name="redirect" value="https://masterliyuu.github.io/thank-you.html">
             
-            <div>
-                <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Subject</label>
-                <input type="text" name="subject" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" name="name" placeholder="Name" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white">
+                <input type="email" name="email" placeholder="Email" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white">
             </div>
-
-            <div>
-                <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Message</label>
-                <textarea name="message" rows="5" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition resize-none"></textarea>
-            </div>
-
-            <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
-            <button type="submit" class="w-full bg-accent text-darkBg font-bold text-base sm:text-lg rounded-lg px-4 sm:px-6 py-3 sm:py-4 hover:bg-sky-400 transition shadow-lg hover:shadow-accent/30 hover:-translate-y-1 active:scale-95">
-                Send Message
-            </button>
+            <input type="text" name="subject" placeholder="Subject" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white">
+            <textarea name="message" rows="5" placeholder="Message" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white"></textarea>
+            <button type="submit" class="w-full bg-accent text-darkBg font-bold text-lg rounded-lg px-6 py-4 hover:bg-sky-400 transition">Send Message</button>
         </form>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="py-6 sm:py-8 text-center border-t border-gray-800 mt-8 sm:mt-12 px-4">
-        <p class="text-gray-600 text-xs sm:text-sm">© 2026 Leo Lingel Pañares. All rights reserved.</p>
+    <footer class="py-8 text-center border-t border-gray-800 mt-10">
+        <p class="text-gray-600 text-sm">© 2026 Leo Lingel Pañares. All rights reserved.</p>
     </footer>
 
-    <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuIcon = document.getElementById('menuIcon');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-            } else {
-                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-            }
-        });
-
-        // Close mobile menu when clicking links
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-            });
-        });
-
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50,
-        });
-
-        // Initialize Proof Swiper
-        const proofSwiper = new Swiper('.proofSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            grabCursor: true,
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            centeredSlides: true,
-            breakpoints: {
-                640: { spaceBetween: 30 },
-                1024: { spaceBetween: 40 }
-            }
-        });
-
-        // Initialize Testimonial Swiper
-        const testimonialSwiper = new Swiper('.testimonialSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            grabCursor: true,
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            breakpoints: {
-                640: { spaceBetween: 30 }
-            }
-        });
-
-        // Counter Animation
-        const counters = document.querySelectorAll('.counter');
-        let hasCounted = false;
-
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !hasCounted) {
-                    hasCounted = true;
-                    counters.forEach(counter => {
-                        const target = +counter.getAttribute('data-target');
-                        const duration = 2000;
-                        const increment = target / (duration / 16);
-                        let current = 0;
-                        
-                        const updateCounter = () => {
-                            current += increment;
-                            if (current < target) {
-                                counter.innerText = Math.ceil(current);
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.innerText = target;
-                            }
-                        };
-                        updateCounter();
-                    });
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const metricsSection = document.getElementById('metrics');
-        if (metricsSection) {
-            counterObserver.observe(metricsSection);
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
