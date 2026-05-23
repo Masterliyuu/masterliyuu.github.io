@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leo Lingel Pañares | Executive VA & Strategic Operator</title>
     
-    <meta name="description" content=" Portfolio of Leo Lingel Pañares - Executive VA, Strategic Operator, and Digital Marketing Specialist.">
+    <meta name="description" content="Portfolio of Leo Lingel Pañares - Executive VA, Strategic Operator, and Digital Marketing Specialist.">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://masterliyuu.github.io/">
@@ -20,6 +20,8 @@
     <meta property="twitter:image" content="https://masterliyuu.github.io/LEO-PROFILE.png">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,6 +36,14 @@
             }
         }
     </script>
+    <style>
+        /* Custom Swiper Controls Styling */
+        .swiper-pagination-bullet { background: #64748b; opacity: 0.5; transition: all 0.3s ease; }
+        .swiper-pagination-bullet-active { background: #38bdf8; opacity: 1; transform: scale(1.2); }
+        .swiper-button-next, .swiper-button-prev { color: #38bdf8; background: rgba(15, 23, 42, 0.6); padding: 30px 20px; border-radius: 10px; backdrop-filter: blur(4px); }
+        .swiper-button-next::after, .swiper-button-prev::after { font-size: 1.2rem !important; font-weight: bold; }
+        .swiper-button-next:hover, .swiper-button-prev:hover { background: rgba(15, 23, 42, 0.9); }
+    </style>
 </head>
 <body class="bg-darkBg text-gray-200 font-sans antialiased">
 
@@ -59,34 +69,30 @@
             Let's Build Together
         </a>
     </header>
+
     <section class="py-10 border-t border-gray-800/50 bg-darkBg">
         <div class="max-w-6xl mx-auto px-6">
             <p data-aos="fade-up" class="text-center text-xs font-bold tracking-widest text-gray-500 uppercase mb-8">Trusted by & Featured at</p>
             <div data-aos="fade-up" data-aos-delay="100" class="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-60">
-                
                 <div class="text-xl md:text-2xl font-black tracking-tighter text-gray-300 hover:text-white transition duration-300 cursor-default">
                     LAMAC <span class="font-light">MPC</span>
                 </div>
-
                 <div class="text-xl md:text-2xl font-bold tracking-widest text-gray-300 hover:text-accent transition duration-300 cursor-default">
                     NATCCO
                 </div>
-
                 <div class="text-xl md:text-2xl font-serif italic font-bold text-gray-300 hover:text-green-400 transition duration-300 cursor-default">
                     AgriTerra
                 </div>
-
                 <div class="text-xl md:text-2xl font-extrabold uppercase tracking-widest text-gray-300 hover:text-blue-500 transition duration-300 cursor-default">
                     ICA <span class="text-sm font-normal tracking-normal text-gray-400">Malaysia</span>
                 </div>
-
                 <div class="text-xl md:text-2xl font-black tracking-tight text-gray-300 hover:text-orange-400 transition duration-300 cursor-default">
                     YOUth<span class="font-light">CAN</span>
                 </div>
-
             </div>
         </div>
     </section>
+
     <section id="services" class="py-20 px-6 max-w-6xl mx-auto border-t border-gray-800">
         <div data-aos="fade-up" class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Core Competencies</h2>
@@ -114,42 +120,100 @@
         </div>
     </section>
 
-    <section id="work" class="py-20 px-6 max-w-6xl mx-auto border-t border-gray-800">
-        <div data-aos="fade-up" class="text-center mb-16">
+    <section id="work" class="py-20 px-6 max-w-4xl mx-auto border-t border-gray-800">
+        <div data-aos="fade-up" class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The Proof Vault</h2>
             <p class="text-gray-400 max-w-2xl mx-auto">Highlighting award-winning pitches, multimedia direction, and strategic leadership.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div data-aos="fade-up" data-aos-delay="100" class="swiper proofSwiper pb-16">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200" alt="Multimedia Direction" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-6 left-6 z-20">
+                                <span class="bg-accent text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Multimedia & Leadership</span>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Documentary Director & Editor-in-Chief</h3>
+                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">Directed "Sugilanon sa Kooperatiba" and led the editorial and design direction for "Soar Lamac MPC: 50 Years in Service," showcasing high-level narrative strategy and multimedia production.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=1200" alt="Pitch Competitions" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-6 left-6 z-20">
+                                <span class="bg-white text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Business Strategy</span>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Award-Winning Pitch Competitions</h3>
+                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">Secured 1st Runner-Up at the NATCCO Youth Entrepreneurship Pitch, 2nd Runner-Up at YOUthCAN, and 3rd Place at the ICA Youth Summit in Malaysia. Proven ability to conceptualize and sell high-value business ideas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" alt="Placeholder 1" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-6 left-6 z-20">
+                                <span class="bg-accent text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Digital Marketing</span>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Placeholder Project Title 3</h3>
+                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">This is a placeholder block for a future case study. Replace this text with a description of a digital marketing campaign, an SEO achievement, or content strategy success.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" alt="Placeholder 2" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-6 left-6 z-20">
+                                <span class="bg-white text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Operations Management</span>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Placeholder Project Title 4</h3>
+                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">This is a placeholder block. You can use this to detail how you optimized a workflow, created standard operating procedures (SOPs), or managed a complex executive calendar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                            <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200" alt="Placeholder 3" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-6 left-6 z-20">
+                                <span class="bg-accent text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Stakeholder Engagement</span>
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Placeholder Project Title 5</h3>
+                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">This is the final placeholder block. Highlight a major team leadership win, a client relationship you scaled, or an operational division you successfully managed here.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             
-            <div data-aos="fade-up" data-aos-delay="100" class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg">
-                <div class="w-full h-56 overflow-hidden bg-gray-700 relative border-b border-gray-700">
-                    <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=800" alt="Multimedia Direction" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute top-4 left-4 z-20">
-                        <span class="bg-accent text-darkBg text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">Multimedia & Leadership</span>
-                    </div>
-                </div>
-                <div class="p-8 flex-grow">
-                    <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Documentary Director & Editor-in-Chief</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Directed "Sugilanon sa Kooperatiba" and led the editorial and design direction for "Soar Lamac MPC: 50 Years in Service," showcasing high-level narrative strategy and multimedia production.</p>
-                </div>
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="200" class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg">
-                <div class="w-full h-56 overflow-hidden bg-gray-700 relative border-b border-gray-700">
-                    <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=800" alt="Pitch Competitions" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute top-4 left-4 z-20">
-                        <span class="bg-white text-darkBg text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">Business Strategy</span>
-                    </div>
-                </div>
-                <div class="p-8 flex-grow">
-                    <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Award-Winning Pitch Competitions</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Secured 1st Runner-Up at the NATCCO Youth Entrepreneurship Pitch, 2nd Runner-Up at YOUthCAN, and 3rd Place at the ICA Youth Summit in Malaysia. Proven ability to conceptualize and sell high-value business ideas.</p>
-                </div>
-            </div>
-
+            <div class="swiper-pagination mt-4"></div>
+            <div class="swiper-button-prev hidden md:flex"></div>
+            <div class="swiper-button-next hidden md:flex"></div>
         </div>
     </section>
 
@@ -247,11 +311,37 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script>
+        /* Initialize Scroll Animations */
         AOS.init({
-            duration: 800, /* Animation duration in ms */
-            once: true, /* Whether animation should happen only once while scrolling down */
-            offset: 100, /* Offset (in px) from the original trigger point */
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        /* Initialize Premium Swiper Carousel */
+        const swiper = new Swiper('.proofSwiper', {
+            slidesPerView: 1, /* Focus on one block per view */
+            spaceBetween: 40,
+            loop: true, /* Allows infinite scrolling */
+            grabCursor: true, /* Shows hand icon to drag */
+            
+            /* Pagination dots at the bottom */
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            
+            /* Left and right navigation arrows */
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            
+            /* Automatically center the active slide */
+            centeredSlides: true,
         });
     </script>
 
