@@ -1,0 +1,76 @@
+* { 
+    -webkit-tap-highlight-color: transparent; 
+}
+
+/* Mobile-First Responsive Text */ 
+@media (max-width: 640px) {
+    html { font-size: 14px; } 
+} 
+@media (min-width: 641px) and (max-width: 1024px) {
+    html { font-size: 15px; } 
+} 
+
+/* Smooth scrolling */ 
+html { scroll-behavior: smooth; } 
+
+/* Swiper Custom Styling */ 
+.swiper-pagination-bullet { background: #64748b; opacity: 0.5; transition: all 0.3s ease; } 
+.swiper-pagination-bullet-active { background: #38bdf8; opacity: 1; transform: scale(1.2); } 
+.swiper-button-next, .swiper-button-prev {
+    color: #38bdf8; 
+    background: rgba(15, 23, 42, 0.6); 
+    padding: 20px 15px; 
+    border-radius: 10px; 
+    backdrop-filter: blur(4px); 
+    width: auto !important; 
+    height: auto !important; 
+    transition: all 0.3s ease; 
+} 
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 1.2rem !important; 
+    font-weight: bold; 
+} 
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: rgba(15, 23, 42, 0.9); 
+} 
+
+@media (max-width: 768px) {
+    .swiper-button-next, .swiper-button-prev { padding: 12px 8px; } 
+    .swiper-button-next::after, .swiper-button-prev::after { font-size: 1rem !important; } 
+} 
+
+/* Responsive Image Optimization */ 
+img { max-width: 100%; height: auto; display: block; } 
+
+/* Touch-friendly buttons */ 
+@media (hover: none) and (pointer: coarse) {
+    button, a { min-height: 44px; } 
+} 
+
+/* Safe area padding for notched devices */ 
+body { padding-top: env(safe-area-inset-top); } 
+
+/* CTA Banner Glow Effect */ 
+.cta-banner {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(56, 189, 248, 0.05) 100%); 
+    border: 1px solid rgba(56, 189, 248, 0.3); 
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.15), inset 0 0 20px rgba(56, 189, 248, 0.05); 
+} 
+.cta-banner:hover {
+    border-color: rgba(56, 189, 248, 0.5); 
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.25), inset 0 0 20px rgba(56, 189, 248, 0.1); 
+} 
+
+/* Elements Animations */ 
+.roi-number { font-variant-numeric: tabular-nums; } 
+.process-step { transition: all 0.3s ease; } 
+.process-step:hover { transform: translateY(-5px); } 
+.case-study-card { transition: all 0.3s ease; } 
+.case-study-card:hover { border-color: rgba(56, 189, 248, 0.5); box-shadow: 0 0 30px rgba(56, 189, 248, 0.15); } 
+
+/* Social Proof Animations */ 
+.testimonial-count { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; } 
+@keyframes pulse {
+    0%, 100% { opacity: 1; } 
+    50% { opacity: 0.8; } 
+}
