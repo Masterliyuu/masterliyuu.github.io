@@ -2,10 +2,12 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f172a">
     <title>Leo Lingel Pañares | Executive VA & Strategic Operator</title>
     
-    <meta name="description" content="Portfolio of Leo Lingel Pañares - Executive VA, Strategic Operator, and Digital Marketing Specialist.">
+    <meta name="description" content="Portfolio of Leo Lingel Pañares - Executive VA, Strategic Operator, and Digital Marketing Specialist with 8+ years of experience.">
+    <meta name="keywords" content="Executive VA, Operations Manager, Digital Marketing, Business Development">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://masterliyuu.github.io/">
@@ -16,407 +18,534 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://masterliyuu.github.io/">
     <meta property="twitter:title" content="Leo Lingel Pañares | Executive VA & Strategic Operator">
-    <meta property="twitter:description" content="Scaling Businesses Through Strategic Operations & Creative Marketing. View my portfolio and specialized resumes.">
+    <meta property="twitter:description" content="Scaling Businesses Through Strategic Operations & Creative Marketing.">
     <meta property="twitter:image" content="https://masterliyuu.github.io/LEO-PROFILE.png">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#0f172a', /* Deep slate blue/black */
-                        accent: '#38bdf8', /* Vibrant light blue */
+                        darkBg: '#0f172a',
+                        accent: '#38bdf8',
+                    },
+                    spacing: {
+                        'safe-top': 'env(safe-area-inset-top)',
+                        'safe-bottom': 'env(safe-area-inset-bottom)',
                     }
                 }
             }
         }
     </script>
+    
     <style>
-        /* Custom Swiper Controls Styling */
+        * { -webkit-tap-highlight-color: transparent; }
+        
+        /* Mobile-First Responsive Text */
+        @media (max-width: 640px) {
+            html { font-size: 14px; }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) {
+            html { font-size: 15px; }
+        }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Swiper Custom Styling */
         .swiper-pagination-bullet { background: #64748b; opacity: 0.5; transition: all 0.3s ease; }
         .swiper-pagination-bullet-active { background: #38bdf8; opacity: 1; transform: scale(1.2); }
-        .swiper-button-next, .swiper-button-prev { color: #38bdf8; background: rgba(15, 23, 42, 0.6); padding: 30px 20px; border-radius: 10px; backdrop-filter: blur(4px); }
-        .swiper-button-next::after, .swiper-button-prev::after { font-size: 1.2rem !important; font-weight: bold; }
-        .swiper-button-next:hover, .swiper-button-prev:hover { background: rgba(15, 23, 42, 0.9); }
+        
+        .swiper-button-next, .swiper-button-prev { 
+            color: #38bdf8; 
+            background: rgba(15, 23, 42, 0.6); 
+            padding: 20px 15px;
+            border-radius: 10px; 
+            backdrop-filter: blur(4px);
+            width: auto !important;
+            height: auto !important;
+            transition: all 0.3s ease;
+        }
+        
+        .swiper-button-next::after, .swiper-button-prev::after { 
+            font-size: 1.2rem !important; 
+            font-weight: bold; 
+        }
+        
+        .swiper-button-next:hover, .swiper-button-prev:hover { 
+            background: rgba(15, 23, 42, 0.9); 
+        }
+
+        @media (max-width: 768px) {
+            .swiper-button-next, .swiper-button-prev { 
+                padding: 12px 8px;
+            }
+            .swiper-button-next::after, .swiper-button-prev::after { 
+                font-size: 1rem !important; 
+            }
+        }
+
+        /* Responsive Image Optimization */
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block;
+        }
+
+        /* Touch-friendly buttons */
+        @media (hover: none) and (pointer: coarse) {
+            button, a { min-height: 44px; }
+        }
+
+        /* Safe area padding for notched devices */
+        body { padding-top: env(safe-area-inset-top); }
     </style>
 </head>
+
 <body class="bg-darkBg text-gray-200 font-sans antialiased">
 
-    <nav class="p-6 flex justify-between items-center border-b border-gray-800/50 fixed w-full top-0 z-50 bg-darkBg/80 backdrop-blur-md transition-all duration-300">
-        <div class="text-xl font-bold text-white tracking-wider">Leoo<span class="text-accent">.</span></div>
-        <div class="hidden md:flex space-x-6">
-            <a href="#services" class="hover:text-accent transition">Services</a>
-            <a href="#work" class="hover:text-accent transition">My Work</a>
-            <a href="#tools" class="hover:text-accent transition">Toolkit</a>
-            <a href="#about" class="hover:text-accent transition">About</a>
+    <!-- MOBILE MENU TOGGLE -->
+    <button id="mobileMenuToggle" class="fixed top-6 right-6 z-[51] md:hidden p-2 rounded-lg bg-accent/10 border border-accent/30 text-accent transition" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="menuIcon"></path>
+        </svg>
+    </button>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full top-0 z-50 bg-darkBg/95 backdrop-blur-lg border-b border-gray-800/50 transition-all duration-300">
+        <div class="px-4 sm:px-6 py-4 flex justify-between items-center max-w-7xl mx-auto">
+            <div class="text-lg sm:text-xl font-bold text-white tracking-wider">Leoo<span class="text-accent">.</span></div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="#services" class="text-sm lg:text-base hover:text-accent transition duration-300">Services</a>
+                <a href="#work" class="text-sm lg:text-base hover:text-accent transition duration-300">My Work</a>
+                <a href="#tools" class="text-sm lg:text-base hover:text-accent transition duration-300">Toolkit</a>
+                <a href="#about" class="text-sm lg:text-base hover:text-accent transition duration-300">About</a>
+            </div>
+            
+            <a href="#contact" class="bg-accent text-darkBg px-4 sm:px-5 py-2 rounded-full text-sm font-semibold hover:bg-sky-400 transition shadow-lg">
+                Get In Touch
+            </a>
         </div>
-        <a href="#contact" class="bg-accent text-darkBg px-5 py-2 rounded-full font-semibold hover:bg-sky-400 transition shadow-lg">Book a Call</a>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-gray-800/50 bg-darkBg/98 backdrop-blur-lg">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#services" class="block py-2 text-sm hover:text-accent transition">Services</a>
+                <a href="#work" class="block py-2 text-sm hover:text-accent transition">My Work</a>
+                <a href="#tools" class="block py-2 text-sm hover:text-accent transition">Toolkit</a>
+                <a href="#about" class="block py-2 text-sm hover:text-accent transition">About</a>
+            </div>
+        </div>
     </nav>
 
-    <header class="min-h-[80vh] flex flex-col justify-center items-center text-center px-6 pt-32">
-        <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight max-w-4xl">
+    <!-- HERO SECTION -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-24 pb-8 sm:pb-12">
+        <h1 data-aos="fade-up" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 sm:mb-6 leading-tight max-w-5xl">
             Scaling Businesses Through <span class="text-accent">Strategic Operations</span> & Creative Marketing.
         </h1>
-        <p data-aos="fade-up" data-aos-delay="150" class="text-lg md:text-xl text-gray-400 max-w-2xl mb-10">
+        <p data-aos="fade-up" data-aos-delay="150" class="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mb-6 sm:mb-10 px-2">
             8+ years of experience streamlining workflows, driving organizational growth, and executing high-level business development.
         </p>
-        <a data-aos="zoom-in" data-aos-delay="300" href="#contact" class="px-8 py-4 bg-accent text-darkBg text-lg font-bold rounded-full hover:bg-sky-400 transition shadow-[0_0_15px_rgba(56,189,248,0.3)]">
+        <a data-aos="zoom-in" data-aos-delay="300" href="#contact" class="px-6 sm:px-8 py-3 sm:py-4 bg-accent text-darkBg text-base sm:text-lg font-bold rounded-full hover:bg-sky-400 transition shadow-[0_0_15px_rgba(56,189,248,0.3)] active:scale-95">
             Let's Build Together
         </a>
     </header>
 
-    <section class="py-10 border-t border-gray-800/50 bg-darkBg">
-        <div class="max-w-6xl mx-auto px-6">
-            <p data-aos="fade-up" class="text-center text-xs font-bold tracking-widest text-gray-500 uppercase mb-8">Trusted by & Featured at</p>
-            <div data-aos="fade-up" data-aos-delay="100" class="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-60">
-                <div class="text-xl md:text-2xl font-black tracking-tighter text-gray-300 hover:text-white transition duration-300 cursor-default">
-                    LAMAC <span class="font-light">MPC</span>
+    <!-- CLIENTS SECTION -->
+    <section class="py-8 sm:py-12 border-t border-gray-800/50 bg-darkBg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <p data-aos="fade-up" class="text-center text-xs font-bold tracking-widest text-gray-500 uppercase mb-6 sm:mb-8">Trusted by & Featured at</p>
+            <div data-aos="fade-up" data-aos-delay="100" class="flex flex-wrap justify-center items-center gap-6 sm:gap-10 md:gap-20 opacity-60">
+                <div class="text-lg sm:text-xl md:text-2xl font-black tracking-tighter text-gray-300 hover:text-white transition duration-300">LAMAC <span class="font-light">MPC</span></div>
+                <div class="text-lg sm:text-xl md:text-2xl font-bold tracking-widest text-gray-300 hover:text-accent transition duration-300">NATCCO</div>
+                <div class="text-lg sm:text-xl md:text-2xl font-serif italic font-bold text-gray-300 hover:text-green-400 transition duration-300">AgriTerra</div>
+                <div class="text-lg sm:text-xl md:text-2xl font-extrabold uppercase tracking-widest text-gray-300 hover:text-blue-500 transition duration-300">ICA <span class="text-xs sm:text-sm font-normal tracking-normal text-gray-400">Malaysia</span></div>
+                <div class="text-lg sm:text-xl md:text-2xl font-black tracking-tight text-gray-300 hover:text-orange-400 transition duration-300">YOUth<span class="font-light">CAN</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICS SECTION -->
+    <section id="metrics" class="py-12 sm:py-16 bg-gray-800/20 border-t border-gray-800/50 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 md:gap-10 text-center">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="8">0</span>+</h3>
+                    <p class="text-xs font-bold tracking-widest text-gray-400 uppercase">Years Experience</p>
                 </div>
-                <div class="text-xl md:text-2xl font-bold tracking-widest text-gray-300 hover:text-accent transition duration-300 cursor-default">
-                    NATCCO
+                <div data-aos="fade-up" data-aos-delay="150">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="3">0</span></h3>
+                    <p class="text-xs font-bold tracking-widest text-gray-400 uppercase">Awards</p>
                 </div>
-                <div class="text-xl md:text-2xl font-serif italic font-bold text-gray-300 hover:text-green-400 transition duration-300 cursor-default">
-                    AgriTerra
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="50">0</span>+</h3>
+                    <p class="text-xs font-bold tracking-widest text-gray-400 uppercase">Projects</p>
                 </div>
-                <div class="text-xl md:text-2xl font-extrabold uppercase tracking-widest text-gray-300 hover:text-blue-500 transition duration-300 cursor-default">
-                    ICA <span class="text-sm font-normal tracking-normal text-gray-400">Malaysia</span>
+                <div data-aos="fade-up" data-aos-delay="250">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="5">0</span>+</h3>
+                    <p class="text-xs font-bold tracking-widest text-gray-400 uppercase">Teams Led</p>
                 </div>
-                <div class="text-xl md:text-2xl font-black tracking-tight text-gray-300 hover:text-orange-400 transition duration-300 cursor-default">
-                    YOUth<span class="font-light">CAN</span>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="100">0</span>%</h3>
+                    <p class="text-xs font-bold tracking-widest text-gray-400 uppercase">Commitment</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="metrics" class="py-12 bg-gray-800/20 border-t border-gray-800/50 relative z-10">
-        <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-10 md:gap-16 text-center">
-            <div data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="8">0</span>+</h3>
-                <p class="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-bold">Years Experience</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="3">0</span></h3>
-                <p class="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-bold">Award-Winning Pitches</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="50">0</span>+</h3>
-                <p class="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-bold">Projects Closed</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="400">
-                <h3 class="text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="5">0</span>+</h3>
-                <p class="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-bold">Divisions Managed</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="500">
-                <h3 class="text-4xl md:text-5xl font-black text-accent mb-2"><span class="counter" data-target="100">0</span>%</h3>
-                <p class="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-bold">Strategic Commitment</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-20 px-6 max-w-6xl mx-auto border-t border-gray-800">
-        <div data-aos="fade-up" class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Core Competencies</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto">Specialized expertise designed to streamline your operations and scale your brand.</p>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
+        <div data-aos="fade-up" class="text-center mb-10 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">Core Competencies</h2>
+            <p class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto px-2">Specialized expertise designed to streamline your operations and scale your brand.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-800/40 border border-gray-700 p-8 rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
-                <div class="text-accent text-4xl mb-6">⚙️</div>
-                <h3 class="text-xl font-bold text-white mb-3">Executive Operations</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Streamlining daily workflows for busy founders. Managing complex calendars, creating standard operating procedures (SOPs), and driving organizational efficiency through automation, delegation, and strategic planning.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
+                <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">⚙️</div>
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Executive Operations</h3>
+                <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">Streamlining daily workflows for busy founders. Managing complex calendars, creating standard operating procedures (SOPs), and driving organizational efficiency through automation, delegation, and strategic planning.</p>
             </div>
             
-            <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800/40 border border-gray-700 p-8 rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
-                <div class="text-accent text-4xl mb-6">🚀</div>
-                <h3 class="text-xl font-bold text-white mb-3">Digital Marketing & Content</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Scaling brand presence through strategic social media management, persuasive copywriting, and high-quality multimedia production using industry-leading tools and data-driven strategies.</p>
+            <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
+                <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">🚀</div>
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Digital Marketing & Content</h3>
+                <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">Scaling brand presence through strategic social media management, persuasive copywriting, and high-quality multimedia production using industry-leading tools and data-driven strategies.</p>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-800/40 border border-gray-700 p-8 rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
-                <div class="text-accent text-4xl mb-6">📈</div>
-                <h3 class="text-xl font-bold text-white mb-3">Business Development</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Driving organizational growth and high-level strategy through process improvement, team leadership, and strategic stakeholder engagement that translates to measurable revenue impact.</p>
+            <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800/40 border border-gray-700 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:-translate-y-2 hover:border-accent transition duration-300">
+                <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">📈</div>
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Business Development</h3>
+                <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">Driving organizational growth and high-level strategy through process improvement, team leadership, and strategic stakeholder engagement that translates to measurable revenue impact.</p>
             </div>
         </div>
     </section>
 
-    <section id="work" class="py-20 px-6 max-w-4xl mx-auto border-t border-gray-800">
-        <div data-aos="fade-up" class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The Proof Vault</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto">Highlighting award-winning pitches, multimedia direction, and strategic leadership.</p>
+    <!-- WORK/PORTFOLIO SECTION -->
+    <section id="work" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
+        <div data-aos="fade-up" class="text-center mb-8 sm:mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 sm:mb-4">The Proof Vault</h2>
+            <p class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto px-2">Highlighting award-winning pitches, multimedia direction, and strategic leadership.</p>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" class="swiper proofSwiper pb-16">
+        <div data-aos="fade-up" data-aos-delay="100" class="swiper proofSwiper pb-12 sm:pb-16">
             <div class="swiper-wrapper">
+                <!-- Slide 1 -->
                 <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
-                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
                             <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200" alt="Multimedia Direction" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-6 left-6 z-20">
-                                <span class="bg-accent text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Multimedia & Leadership</span>
+                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
+                                <span class="bg-accent text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Multimedia & Leadership</span>
                             </div>
                         </div>
-                        <div class="p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Documentary Director & Editor-in-Chief</h3>
-                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">Directed "Sugilanon sa Kooperatiba" and led the editorial and design direction for "Soar Lamac MPC: 50 Years of Impact" documentary. Managed multimedia production pipeline, stakeholder coordination, and creative direction for organizational storytelling.</p>
+                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Documentary Director & Editor-in-Chief</h3>
+                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Directed "Sugilanon sa Kooperatiba" and led the editorial and design direction for "Soar Lamac MPC: 50 Years of Impact" documentary. Managed multimedia production pipeline, stakeholder coordination, and creative direction for organizational storytelling.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Slide 2 -->
                 <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
-                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
                             <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&q=80&w=1200" alt="Pitch Competitions" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-6 left-6 z-20">
-                                <span class="bg-white text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Business Strategy</span>
+                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
+                                <span class="bg-white text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Business Strategy</span>
                             </div>
                         </div>
-                        <div class="p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Award-Winning Pitch Competitions</h3>
-                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">Secured 1st Runner-Up at the NATCCO Youth Entrepreneurship Pitch, 2nd Runner-Up at YOUthCAN, and 3rd Place in the ICA Malaysia Business Competition. Developed compelling business narratives and presentations that resonated with expert judges and investors.</p>
+                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Award-Winning Pitch Competitions</h3>
+                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Secured 1st Runner-Up at the NATCCO Youth Entrepreneurship Pitch, 2nd Runner-Up at YOUthCAN, and 3rd Place in the ICA Malaysia Business Competition. Developed compelling business narratives and presentations that resonated with expert judges and investors.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Slide 3 -->
                 <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
-                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
                             <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" alt="Digital Marketing Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-6 left-6 z-20">
-                                <span class="bg-accent text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Digital Marketing</span>
+                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
+                                <span class="bg-accent text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Digital Marketing</span>
                             </div>
                         </div>
-                        <div class="p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Social Media Growth Campaign</h3>
-                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">Developed and executed comprehensive social media strategy that increased engagement by 300% and grew audience base across multiple platforms. Implemented data-driven content calendar and real-time community management.</p>
+                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Social Media Growth Campaign</h3>
+                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Developed and executed comprehensive social media strategy that increased engagement by 300% and grew audience base across multiple platforms. Implemented data-driven content calendar and real-time community management.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Slide 4 -->
                 <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
-                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
                             <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" alt="Operations Management" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-6 left-6 z-20">
-                                <span class="bg-white text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Operations Management</span>
+                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
+                                <span class="bg-white text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Operations</span>
                             </div>
                         </div>
-                        <div class="p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Operational Process Optimization</h3>
-                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">Streamlined organizational workflows and implemented standardized operating procedures across 5+ departments. Reduced operational redundancies by 40% and improved team productivity through digital transformation initiatives.</p>
+                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Operational Process Optimization</h3>
+                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Streamlined organizational workflows and implemented standardized operating procedures across 5+ departments. Reduced operational redundancies by 40% and improved team productivity through digital transformation initiatives.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Slide 5 -->
                 <div class="swiper-slide">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
-                        <div class="w-full h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
+                    <div class="group relative overflow-hidden rounded-lg sm:rounded-2xl bg-gray-800/40 border border-gray-700 hover:border-accent transition duration-300 flex flex-col shadow-lg h-full">
+                        <div class="w-full h-48 sm:h-72 md:h-96 overflow-hidden bg-gray-700 relative border-b border-gray-700">
                             <div class="absolute inset-0 bg-darkBg/60 group-hover:bg-darkBg/20 transition duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200" alt="Stakeholder Engagement" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-6 left-6 z-20">
-                                <span class="bg-accent text-darkBg text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-md">Stakeholder Engagement</span>
+                            <div class="absolute top-3 sm:top-6 left-3 sm:left-6 z-20">
+                                <span class="bg-accent text-darkBg text-xs font-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full uppercase tracking-wider shadow-md">Leadership</span>
                             </div>
                         </div>
-                        <div class="p-8 md:p-10 flex-grow text-center">
-                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-accent transition duration-300">Strategic Partnership Development</h3>
-                            <p class="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">Built and maintained relationships with key stakeholders resulting in successful partnerships with major industry organizations. Facilitated collaborative initiatives that expanded market reach and organizational influence.</p>
+                        <div class="p-4 sm:p-8 md:p-10 flex-grow text-center">
+                            <h3 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-4 group-hover:text-accent transition duration-300">Strategic Partnership Development</h3>
+                            <p class="text-xs sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto">Built and maintained relationships with key stakeholders resulting in successful partnerships with major industry organizations. Facilitated collaborative initiatives that expanded market reach and organizational influence.</p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="swiper-pagination mt-4"></div>
-            <div class="swiper-button-prev hidden md:flex"></div>
-            <div class="swiper-button-next hidden md:flex"></div>
+            <div class="swiper-button-prev hidden sm:flex"></div>
+            <div class="swiper-button-next hidden sm:flex"></div>
         </div>
     </section>
 
-    <section id="tools" class="py-20 px-6 max-w-6xl mx-auto border-t border-gray-800">
-        <div data-aos="fade-up" class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-white mb-4">Software Mastery</h2>
-            <p class="text-gray-400">The tools I use to execute operational efficiency and creative marketing.</p>
+    <!-- TOOLS SECTION -->
+    <section id="tools" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
+        <div data-aos="fade-up" class="text-center mb-8 sm:mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 sm:mb-4">Software Mastery</h2>
+            <p class="text-sm sm:text-base text-gray-400">The tools I use to execute operational excellence and creative marketing.</p>
         </div>
         
-        <div data-aos="zoom-in" data-aos-delay="150" class="flex flex-wrap justify-center gap-4">
-            <span class="px-6 py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-sm font-semibold hover:border-accent transition cursor-default">Google Workspace</span>
-            <span class="px-6 py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-sm font-semibold hover:border-accent transition cursor-default">Trello & Asana</span>
-            <span class="px-6 py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-sm font-semibold hover:border-accent transition cursor-default">Adobe Creative Suite</span>
-            <span class="px-6 py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-sm font-semibold hover:border-accent transition cursor-default">CapCut</span>
-            <span class="px-6 py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-sm font-semibold hover:border-accent transition cursor-default">Meta Tools</span>
-            <span class="px-6 py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-sm font-semibold hover:border-accent transition cursor-default">Canva</span>
-            <span class="px-6 py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-sm font-semibold hover:border-accent transition cursor-default">Microsoft Office</span>
+        <div data-aos="zoom-in" data-aos-delay="150" class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Google Workspace</span>
+            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Trello & Asana</span>
+            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Adobe Suite</span>
+            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">CapCut</span>
+            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Meta Tools</span>
+            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">Canva</span>
+            <span class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-200 rounded-full border border-gray-700 text-xs sm:text-sm font-semibold hover:border-accent transition cursor-default">MS Office</span>
         </div>
     </section>
 
-    <section id="about" class="py-20 px-6 max-w-6xl mx-auto border-t border-gray-800 overflow-hidden">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div data-aos="fade-right" class="md:w-1/2">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">From IT Educator to Strategic Operator.</h2>
-                <p class="text-gray-400 mb-4 leading-relaxed">
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800 overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-center gap-6 sm:gap-12">
+            <div data-aos="fade-right" class="w-full lg:w-1/2">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">From IT Educator to Strategic Operator.</h2>
+                <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4 leading-relaxed">
                     I hold a B.S. in Information Technology and began my career teaching computer studies and multimedia. Since then, I have spent over 8 years managing high-level operations, leading cross-functional teams, and driving strategic initiatives for diverse organizations across multiple industries.
                 </p>
-                <p class="text-gray-400 mb-8 leading-relaxed">
+                <p class="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8 leading-relaxed">
                     As a former National President for AGRITERRA Youth National and a seasoned Business Development Manager, I don't just complete tasks—I optimize systems, lead teams, and scale businesses. My background uniquely positions me to understand both the technical and human elements of operational excellence.
                 </p>
                 
-                <div class="mt-8">
-                    <h4 class="text-white font-semibold mb-4 text-sm tracking-wider uppercase text-accent">Download My Specialized Resumes</h4>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="Leo-Updated-Resume-EVA-2026.pdf" target="_blank" class="px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-sm font-medium hover:border-accent hover:text-accent transition">
+                <div class="mt-6 sm:mt-8">
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 text-xs sm:text-sm tracking-wider uppercase text-accent">Download My Specialized Resumes</h4>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                        <a href="Leo-Updated-Resume-EVA-2026.pdf" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-xs sm:text-sm font-medium hover:border-accent hover:text-accent transition text-center">
                             📄 Executive VA
                         </a>
-                        <a href="Leo-Updated-Resume-MS-2026.pdf" target="_blank" class="px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-sm font-medium hover:border-accent hover:text-accent transition">
+                        <a href="Leo-Updated-Resume-MS-2026.pdf" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-xs sm:text-sm font-medium hover:border-accent hover:text-accent transition text-center">
                             📄 Marketing
                         </a>
-                        <a href="Leo-Updated-Resume-BDO2026.pdf" target="_blank" class="px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-sm font-medium hover:border-accent hover:text-accent transition">
+                        <a href="Leo-Updated-Resume-BDO2026.pdf" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2 border border-gray-600 text-gray-300 rounded-lg text-xs sm:text-sm font-medium hover:border-accent hover:text-accent transition text-center">
                             📄 Business Dev
                         </a>
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-left" class="md:w-1/2 flex justify-center mt-10 md:mt-0">
-                <div class="w-72 h-72 rounded-full border-4 border-gray-800 shadow-[0_0_30px_rgba(56,189,248,0.2)] bg-gray-700 flex items-center justify-center text-gray-500 overflow-hidden">
+            
+            <div data-aos="fade-left" class="w-full lg:w-1/2 flex justify-center">
+                <div class="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-gray-800 shadow-[0_0_30px_rgba(56,189,248,0.2)] bg-gray-700 flex items-center justify-center text-gray-500 overflow-hidden">
                     <img src="LEO-PROFILE.png" alt="Leo Lingel Pañares" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 max-w-4xl mx-auto border-t border-gray-800">
-        <div data-aos="zoom-in" class="swiper testimonialSwiper pb-12">
+    <!-- TESTIMONIALS SECTION -->
+    <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-gray-800">
+        <div data-aos="zoom-in" class="swiper testimonialSwiper pb-12 sm:pb-16">
             <div class="swiper-wrapper">
                 
+                <!-- Testimonial 1 -->
                 <div class="swiper-slide">
-                    <div class="bg-gray-800/40 border border-gray-700 p-10 md:p-14 rounded-3xl relative shadow-2xl mx-2">
-                        <div class="absolute -top-6 left-10 text-6xl text-accent opacity-50 font-serif">"</div>
-                        <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-8 relative z-10 text-center">
+                    <div class="bg-gray-800/40 border border-gray-700 p-6 sm:p-10 md:p-14 rounded-lg sm:rounded-3xl relative shadow-2xl mx-1 sm:mx-2">
+                        <div class="absolute -top-4 sm:-top-6 left-4 sm:left-10 text-4xl sm:text-6xl text-accent opacity-50 font-serif">"</div>
+                        <p class="text-base sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-6 sm:mb-8 relative z-10 text-center">
                             Leo is a rare talent who seamlessly blends high-level operational strategy with creative marketing. His ability to optimize systems while leading teams to execute award-winning deliverables is exceptional.
                         </p>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" alt="Executive Recommender 1" class="w-full h-full object-cover">
+                        <div class="flex items-center justify-center gap-3 sm:gap-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" alt="Recommender 1" class="w-full h-full object-cover">
                             </div>
                             <div class="text-left">
-                                <h4 class="text-white font-bold">Placeholder Name 1</h4>
-                                <p class="text-accent text-sm">Executive Director, Example Corp</p>
+                                <h4 class="text-white font-bold text-sm sm:text-base">Placeholder Name 1</h4>
+                                <p class="text-accent text-xs sm:text-sm">Executive Director, Example Corp</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 2 -->
                 <div class="swiper-slide">
-                    <div class="bg-gray-800/40 border border-gray-700 p-10 md:p-14 rounded-3xl relative shadow-2xl mx-2">
-                        <div class="absolute -top-6 left-10 text-6xl text-accent opacity-50 font-serif">"</div>
-                        <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-8 relative z-10 text-center">
+                    <div class="bg-gray-800/40 border border-gray-700 p-6 sm:p-10 md:p-14 rounded-lg sm:rounded-3xl relative shadow-2xl mx-1 sm:mx-2">
+                        <div class="absolute -top-4 sm:-top-6 left-4 sm:left-10 text-4xl sm:text-6xl text-accent opacity-50 font-serif">"</div>
+                        <p class="text-base sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-6 sm:mb-8 relative z-10 text-center">
                             Working with Leo completely transformed our workflow. His strategic foresight and dedication to getting projects closed on time and under budget saved us countless hours and resources.
                         </p>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Executive Recommender 2" class="w-full h-full object-cover">
+                        <div class="flex items-center justify-center gap-3 sm:gap-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Recommender 2" class="w-full h-full object-cover">
                             </div>
                             <div class="text-left">
-                                <h4 class="text-white font-bold">Placeholder Name 2</h4>
-                                <p class="text-accent text-sm">Operations Manager, Tech Innovations</p>
+                                <h4 class="text-white font-bold text-sm sm:text-base">Placeholder Name 2</h4>
+                                <p class="text-accent text-xs sm:text-sm">Operations Manager, Tech Innovations</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 3 -->
                 <div class="swiper-slide">
-                    <div class="bg-gray-800/40 border border-gray-700 p-10 md:p-14 rounded-3xl relative shadow-2xl mx-2">
-                        <div class="absolute -top-6 left-10 text-6xl text-accent opacity-50 font-serif">"</div>
-                        <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-8 relative z-10 text-center">
+                    <div class="bg-gray-800/40 border border-gray-700 p-6 sm:p-10 md:p-14 rounded-lg sm:rounded-3xl relative shadow-2xl mx-1 sm:mx-2">
+                        <div class="absolute -top-4 sm:-top-6 left-4 sm:left-10 text-4xl sm:text-6xl text-accent opacity-50 font-serif">"</div>
+                        <p class="text-base sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic mb-6 sm:mb-8 relative z-10 text-center">
                             A true professional. From managing stakeholder relations to steering our multimedia marketing efforts, his 100% commitment to our business goals was evident from day one.
                         </p>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
-                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200" alt="Executive Recommender 3" class="w-full h-full object-cover">
+                        <div class="flex items-center justify-center gap-3 sm:gap-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-600 overflow-hidden border-2 border-gray-700">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200" alt="Recommender 3" class="w-full h-full object-cover">
                             </div>
                             <div class="text-left">
-                                <h4 class="text-white font-bold">Placeholder Name 3</h4>
-                                <p class="text-accent text-sm">Founder, Startup Hub</p>
+                                <h4 class="text-white font-bold text-sm sm:text-base">Placeholder Name 3</h4>
+                                <p class="text-accent text-xs sm:text-sm">Founder, Startup Hub</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="swiper-pagination mt-6"></div>
+            <div class="swiper-pagination mt-4 sm:mt-6"></div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 px-6 max-w-4xl mx-auto border-t border-gray-800">
-        <div data-aos="fade-up" class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's Work Together</h2>
-            <p class="text-gray-400">Send me a message below, and I'll get back to you within 24 hours.</p>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-12 sm:py-20 px-4 sm:px-6 max-w-4xl mx-auto border-t border-gray-800">
+        <div data-aos="fade-up" class="text-center mb-8 sm:mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 sm:mb-4">Let's Work Together</h2>
+            <p class="text-sm sm:text-base text-gray-400">Send me a message below, and I'll get back to you within 24 hours.</p>
         </div>
 
-        <form data-aos="fade-up" data-aos-delay="150" action="https://api.web3forms.com/submit" method="POST" class="space-y-6 bg-gray-800/30 p-8 rounded-2xl border border-gray-700 shadow-xl">
+        <form data-aos="fade-up" data-aos-delay="150" action="https://api.web3forms.com/submit" method="POST" class="space-y-4 sm:space-y-6 bg-gray-800/30 p-6 sm:p-8 rounded-xl sm:rounded-2xl border border-gray-700 shadow-xl">
             <input type="hidden" name="access_key" value="b59b3ab8-55eb-4e9b-9f2e-fc29b7b38804">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                    <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
-                    <input type="text" name="name" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
+                    <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Name</label>
+                    <input type="text" name="name" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                    <input type="email" name="email" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
+                    <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Email</label>
+                    <input type="email" name="email" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
                 </div>
             </div>
             
             <div>
-                <label class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
-                <input type="text" name="subject" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
+                <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Subject</label>
+                <input type="text" name="subject" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition">
             </div>
 
             <div>
-                <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
-                <textarea name="message" rows="5" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition resize-none"></textarea>
+                <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Message</label>
+                <textarea name="message" rows="5" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition resize-none"></textarea>
             </div>
 
             <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
-            <button type="submit" class="w-full bg-accent text-darkBg font-bold text-lg rounded-lg px-6 py-4 hover:bg-sky-400 transition shadow-lg hover:shadow-accent/30 hover:-translate-y-1">
+            <button type="submit" class="w-full bg-accent text-darkBg font-bold text-base sm:text-lg rounded-lg px-4 sm:px-6 py-3 sm:py-4 hover:bg-sky-400 transition shadow-lg hover:shadow-accent/30 hover:-translate-y-1 active:scale-95">
                 Send Message
             </button>
         </form>
     </section>
 
-    <footer class="py-8 text-center border-t border-gray-800 mt-10">
-        <p class="text-gray-600 text-sm">© 2026 Leo Lingel Pañares. All rights reserved.</p>
+    <!-- FOOTER -->
+    <footer class="py-6 sm:py-8 text-center border-t border-gray-800 mt-8 sm:mt-12 px-4">
+        <p class="text-gray-600 text-xs sm:text-sm">© 2026 Leo Lingel Pañares. All rights reserved.</p>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script>
-        /* Initialize Scroll Animations */
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            } else {
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+            }
+        });
+
+        // Close mobile menu when clicking links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            });
+        });
+
+        // Initialize AOS
         AOS.init({
             duration: 800,
             once: true,
-            offset: 100,
+            offset: 50,
         });
 
-        /* Initialize Premium Swiper Carousel for Proof Vault */
+        // Initialize Proof Swiper
         const proofSwiper = new Swiper('.proofSwiper', {
             slidesPerView: 1,
-            spaceBetween: 40,
+            spaceBetween: 20,
             loop: true,
             grabCursor: true,
             pagination: { el: '.swiper-pagination', clickable: true },
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             centeredSlides: true,
+            breakpoints: {
+                640: { spaceBetween: 30 },
+                1024: { spaceBetween: 40 }
+            }
         });
 
-        /* Initialize Swiper Carousel for Testimonials (Autoplay enabled) */
+        // Initialize Testimonial Swiper
         const testimonialSwiper = new Swiper('.testimonialSwiper', {
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: 20,
             loop: true,
             grabCursor: true,
             autoplay: {
@@ -424,23 +553,25 @@
                 disableOnInteraction: false,
             },
             pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: {
+                640: { spaceBetween: 30 }
+            }
         });
 
-        /* Number Counter Animation Logic */
+        // Counter Animation
         const counters = document.querySelectorAll('.counter');
         let hasCounted = false;
 
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                // When the metrics section scrolls into view
                 if (entry.isIntersecting && !hasCounted) {
-                    hasCounted = true; // Ensure it only animates once
+                    hasCounted = true;
                     counters.forEach(counter => {
                         const target = +counter.getAttribute('data-target');
-                        const duration = 2000; // Animation lasts 2 seconds
-                        const increment = target / (duration / 16); // 60 frames per second
-                        
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
                         let current = 0;
+                        
                         const updateCounter = () => {
                             current += increment;
                             if (current < target) {
@@ -454,10 +585,10 @@
                     });
                 }
             });
-        }, { threshold: 0.5 }); // Triggers when 50% of the section is visible
+        }, { threshold: 0.5 });
 
         const metricsSection = document.getElementById('metrics');
-        if(metricsSection) {
+        if (metricsSection) {
             counterObserver.observe(metricsSection);
         }
     </script>
